@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intro · Meeting Point (propuesta de edición) | Juan Francisco López Haro</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="description" content="Propuesta de intro de 60 segundos para el episodio de The Agile Monkeys sobre Meeting Point.">
+<meta property="og:title" content="Intro · Meeting Point (propuesta de edición)">
+<meta property="og:description" content="Propuesta de intro de 60 segundos para el episodio sobre Meeting Point.">
+<meta property="og:image" content="https://juanfranciscolopezharo-growth.github.io/tam-intro/poster.jpg">
+<style>
+  :root{--tinta:#000;--suave:#787878;--linea:#e5e5e5;--acc:#0000ee;--bg:#f5f5f5}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tinta);font:15px/1.7 "IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  .card{max-width:980px;margin:48px auto;background:#fff;padding:44px 48px 36px}
+  h1{font-size:1rem;font-weight:600;margin:0 0 4px}
+  .sub{color:var(--suave);margin:0 0 26px}
+  video{width:100%;height:auto;display:block;background:#000}
+  ul{padding-left:18px;margin:26px 0 0}
+  li{margin:0 0 6px}
+  b{font-weight:600}
+  a{color:var(--acc)}
+  footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--linea);color:var(--suave);font-size:.85rem}
+  @media (max-width:640px){.card{margin:0;padding:24px 18px}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<main class="card">
+  <h1>meeting point / intro de 60 s</h1>
+  <p class="sub">Propuesta de edición de Juan Francisco López Haro sobre el episodio publicado.</p>
+
+  <video id="v" controls playsinline preload="metadata" poster="poster.jpg"></video>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js"></script>
+  <script>
+    var v = document.getElementById('v'), src = 'intro.m3u8';
+    if (v.canPlayType('application/vnd.apple.mpegurl')) { v.src = src; }
+    else if (window.Hls && Hls.isSupported()) { var h = new Hls(); h.loadSource(src); h.attachMedia(v); }
+  </script>
+
+  <ul>
+    <li><b>Estructura:</b> cuenta atrás de 60 s que llega a cero cuando arranca el episodio.</li>
+    <li><b>Ritmo:</b> cortes y acercamientos al hilo del discurso, subtítulos para verlo sin sonido.</li>
+    <li><b>Estética:</b> la de theagilemonkeys.com (IBM Plex Mono, blanco, azul de enlace).</li>
+    <li><b>Efecto:</b> un único glitch en «había mezclado…», porque el tema es justo ese: datos que se contaminan.</li>
+  </ul>
+
+  <footer>Juan Francisco López Haro · <a href="https://www.linkedin.com/in/juanfranciscolopezharo/">LinkedIn</a></footer>
+</main>
+</body>
+</html>
